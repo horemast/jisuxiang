@@ -1,12 +1,10 @@
 /** @type {import('next').NextConfig} */
-
 const nextConfig = {
-  output: 'standalone',
+  output: 'export',               // 关键：静态导出
+  trailingSlash: true,            // 可选：避免 404
   eslint: {
-    // 在构建过程中忽略ESLint错误
-    ignoreDuringBuilds: true,
+    ignoreDuringBuilds: true,     // 保持你原来的 ESLint 忽略
   },
-  /* config options here */
 };
 
-module.exports = nextConfig; 
+module.exports = nextConfig;
